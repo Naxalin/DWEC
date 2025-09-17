@@ -1,19 +1,35 @@
-const estudiante = {
-    nombre : "",
-    apellido : "",
-    calificaciones : 0,
-    aprobado : false
+function Estudiante (nombre, apellido, calificaciones){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.calificaciones = calificaciones;
+    this.aprobado = false;
 }
 
-let estudiantes = [estudiante]
+function revision (estudiantes){
+    estudiantes.forEach(estudiante => {
+        if(estudiante.calificaciones >= 5 ){
+            estudiante.aprobado = true
+        }
+    });
+}
 
-estudiantes.push({nombre: "PEPe", apellido: "Perez", calificaciones: 7, aprobado: true});
-estudiantes.push({nombre: "Manola", apellido: "Peralta", calificaciones: 3, aprobado: false});
-estudiantes.push({nombre: "Nel", apellido: "Lisboa", calificaciones: 6, aprobado: true});
+let estudiantes = []
 
+function notaAleatoria(){
+    return Math.floor(Math.random() * 11)
+}
+
+estudiantes.push(new Estudiante("PEPe", "Perez", notaAleatoria()));
+estudiantes.push(new Estudiante("Manola", "Peralta", notaAleatoria()));
+estudiantes.push(new Estudiante("Nel", "Lisboa", notaAleatoria()));
+
+revision(estudiantes)
+
+index = 0
 console.table(estudiantes)
 
-estudiantes = estudiantes.map((estudiante, index) => ({
+
+estudiantes = estudiantes.map((estudiante) => ({
     ...estudiante,
     id: index + 1
 }));
@@ -24,11 +40,5 @@ const aprobados =estudiantes.filter(function(estudiante){
         return estudiante
     }
 })
-
-function revision (estudiantes){
-    if(estudiantes.calificaciones < 5 & estudiantes.calificaciones == true ){
-        estudiante.aprobado = false
-    }
-}
 
 console.table(estudiantes)
