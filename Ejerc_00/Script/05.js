@@ -15,7 +15,7 @@ console.table(estudiantes)
 
 estudiantes = estudiantes.map((estudiante, index) => ({
     ...estudiante,
-    id: index + 1 // ID empieza en 1
+    id: index + 1
 }));
 
 const aprobados =estudiantes.filter(function(estudiante){
