@@ -7,14 +7,16 @@ const estudiante = {
 
 let estudiantes = [estudiante]
 
-estudiantes.push("PEPe","perez",7,true)
-estudiantes.push("manola","Peralta",3,false)
-estudiantes.push("Nel","lisboa",6,true)
-let posicion = 0
-const registro = estudiantes.map((posicion,estudiantes) => {
-    posicion +1
-    return posicion
-})
+estudiantes.push({nombre: "PEPe", apellido: "Perez", calificaciones: 7, aprobado: true});
+estudiantes.push({nombre: "Manola", apellido: "Peralta", calificaciones: 3, aprobado: false});
+estudiantes.push({nombre: "Nel", apellido: "Lisboa", calificaciones: 6, aprobado: true});
+
+console.table(estudiantes)
+
+estudiantes = estudiantes.map((estudiante, index) => ({
+    ...estudiante,
+    id: index + 1 // ID empieza en 1
+}));
 
 const aprobados =estudiantes.filter(function(estudiante){
     if(estudiante.calificaciones >= 5){
@@ -29,4 +31,4 @@ function revision (estudiantes){
     }
 }
 
-console.table(registro)
+console.table(estudiantes)
