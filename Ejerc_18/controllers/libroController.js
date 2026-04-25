@@ -1,5 +1,5 @@
-const Libro = require('../models/Libro');
-const Prestamo = require('../models/Prestamo');
+const Libro = require('../models/libro');
+const Prestamo = require('../models/prestamo');
 
 exports.getAll = async (req, res) => {
   try {
