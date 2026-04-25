@@ -1,29 +1,30 @@
-const db = require('../../config/db');
+const pool = require('../config/db');
 
 const Libro = {
 
-  getAll: () => {
-    return db.query('SELECT * FROM libros ORDER BY titulo');
+  async getAll() {
+    const [rows] = await pool.query('SELECT * FROM libros ORDER BY titulo');
+    return rows;
   },
 
-
-  getById: (id) => {
-    return db.query('SELECT * FROM libros WHERE id = ?', [id]);
+  async getById(id) {
+    const [rows] = await pool.query('SELECT * FROM libros WHERE id = ?', [id]);
+    return rows[0] || null;
   },
 
-  // Solo los prestados
-  getPrestados: () => {
-    return db.query(`
+  async getPrestados() {
+    const [rows] = await pool.query(`
       SELECT l.*, p.nombre_prestatario, p.fecha_devolucion
       FROM libros l
       JOIN prestamos p ON l.id = p.libro_id
       WHERE l.estado = 'Prestado' AND p.fecha_entrega IS NULL
       ORDER BY l.titulo
     `);
+    return rows;
   },
 
-  getVencidos: () => {
-    return db.query(`
+  async getVencidos() {
+    const [rows] = await pool.query(`
       SELECT l.*, p.nombre_prestatario, p.fecha_devolucion
       FROM libros l
       JOIN prestamos p ON l.id = p.libro_id
@@ -32,11 +33,13 @@ const Libro = {
         AND p.fecha_devolucion < CURDATE()
       ORDER BY p.fecha_devolucion ASC
     `);
+    return rows;
   },
 
-  updateEstado: (id, estado) => {
-    return db.query('UPDATE libros SET estado = ? WHERE id = ?', [estado, id]);
+  async updateEstado(id, estado) {
+    await pool.query('UPDATE libros SET estado = ? WHERE id = ?', [estado, id]);
   },
+
 };
 
 module.exports = Libro;
