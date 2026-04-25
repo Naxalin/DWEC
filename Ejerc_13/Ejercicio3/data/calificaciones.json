@@ -1,0 +1,14 @@
+  {
+          "_id": "...",
+          "firstName": "Alice",
+          "lastName": "Smith",
+          "email": "alice.smith@example.com",
+          "picture": "...",
+          "calificaciones": {
+            "Matemáticas": 8.5,
+            "Historia": 7.0,
+            "Ciencia": 9.2,
+            "Inglés": 6.8,
+            "Arte": 7.5
+          }
+        }

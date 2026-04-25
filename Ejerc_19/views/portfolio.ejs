@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portafolio de <%= user.username %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <div class="row">
+      <!-- Perfil -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow text-center p-4">
+          <img src="<%= user.photo || 'https://ui-avatars.com/api/?name=' + user.username + '&size=128&background=4f46e5&color=fff' %>"
+            class="rounded-circle mx-auto mb-3" width="100" height="100" />
+          <h2 class="h4">@<%= user.username %></h2>
+          <p class="text-muted"><%= user.bio || 'Sin biografía' %></p>
+          <p><i class="bi bi-envelope"></i> <%= user.email %></p>
+          <% if (links.length > 0) { %>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+              <% links.forEach(link => { %>
+                <a href="<%= link.url %>" target="_blank" class="btn btn-outline-primary btn-sm">
+                  <i class="bi bi-link-45deg"></i> <%= link.platform %>
+                </a>
+              <% }) %>
+            </div>
+          <% } %>
+          <% if (isOwner) { %>
+            <a href="/dashboard" class="btn btn-primary mt-3">
+              <i class="bi bi-speedometer2"></i> Gestionar Portafolio
+            </a>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Proyectos -->
+      <div class="col-md-8">
+        <h3 class="mb-3">🚀 Proyectos</h3>
+        <% if (projects.length === 0) { %>
+          <div class="alert alert-info">No hay proyectos todavía</div>
+        <% } else { %>
+          <div class="row">
+            <% projects.forEach(project => { %>
+              <div class="col-md-6 mb-3">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary"><%= project.title %></h5>
+                    <p class="card-text text-muted small"><%= project.description %></p>
+                  </div>
+                  <div class="card-footer d-flex gap-2">
+                    <% if (project.repo_url) { %>
+                      <a href="<%= project.repo_url %>" target="_blank" class="btn btn-dark btn-sm">
+                        <i class="bi bi-github"></i> Repo
+                      </a>
+                    <% } %>
+                    <% if (project.live_url) { %>
+                      <a href="<%= project.live_url %>" target="_blank" class="btn btn-success btn-sm">
+                        <i class="bi bi-globe"></i> Demo
+                      </a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

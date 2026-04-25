@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+    <form action="">
+        <label for="tamaño">Pequeña</label>
+        <input type="radio" data-precio="10.00" name="Pequeño" id="tamaño">
+        <br>
+        <label for="tamaño">Mediana</label>
+        <input type="radio" data-precio="12.00" name="mediano" id="tamaño">
+        <br>
+        <label for="tamaño">Grande</label>
+        <input type="radio" data-precio="15.00" name="Grande" id="tamaño">
+        <br>
+        <label for="queso">Extra de queso</label>
+        <input type="checkbox" name="queso" id="queso" data-precio="1.00">
+        <br>
+        <label for="Pepperoni">Pepperoni</label>
+        <input type="checkbox" name="Pepperoni" id="Pepperoni" data-precio="1.50">
+        <br>
+        <label for="Champiñones">Champiñones</label>
+        <input type="checkbox" name="Champiñones" id="Champiñones" data-precio="0.75">
+        <br>
+        <label for="Piña">Piña</label>
+        <input type="checkbox" name="Piña" id="Piña" data-precio="1.00">
+        <br>
+        <div><p>Total: <span class="totalPrecio" data-precio="0.00">0.00</span> €</p></div>
+
+    </form>
+    <button>Realizar Pedido</button>
+
+    <script src="./Script/script.js"></script>
+</body>
+</html>

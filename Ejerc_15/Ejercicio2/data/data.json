@@ -1,0 +1,22 @@
+[
+  { "id": "task-1", "status": "Pendiente" },
+  { "id": "task-2", "status": "Realizando" },
+  { "id": "task-3", "status": "Completada" },
+  { "id": "task-4", "status": "Pendiente" },
+  { "id": "task-5", "status": "Realizando" },
+  { "id": "task-6", "status": "Completada" },
+  { "id": "task-7", "status": "Pendiente" },
+  { "id": "task-8", "status": "Realizando" },
+  { "id": "task-9", "status": "Completada" },
+  { "id": "task-10", "status": "Pendiente" },
+  { "id": "task-11", "status": "Realizando" },
+  { "id": "task-12", "status": "Completada" },
+  { "id": "task-13", "status": "Pendiente" },
+  { "id": "task-14", "status": "Realizando" },
+  { "id": "task-15", "status": "Completada" },
+  { "id": "task-16", "status": "Pendiente" },
+  { "id": "task-17", "status": "Realizando" },
+  { "id": "task-18", "status": "Completada" },
+  { "id": "task-19", "status": "Pendiente" },
+  { "id": "task-20", "status": "Realizando" }
+]

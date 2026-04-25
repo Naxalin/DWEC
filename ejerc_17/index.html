@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+          <i class="bi bi-music-note-beamed"></i> MusicApp
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="albumMenu" href="/">Álbumes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="artistasMenu" href="/artistas">Artistas</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <button
+                class="btn btn-outline-success btn-sm añadirNuevo"
+                data-bs-toggle="modal"
+                data-bs-target="#modalFormulario"
+              >
+                + Nuevo Álbum
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="modal fade"
+      id="modalFormulario"
+      tabindex="-1"
+      aria-labelledby="modalFormularioLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+          <div class="modal-header bg-dark text-white">
+            <h5 class="modal-title" id="modalFormularioLabel">Nuevo Álbum</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <form id="form-album" data-id="">
+              <div class="mb-3" >
+                <label class="form-label fw-bold">Título del Álbum</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="titulo"
+                  placeholder="Ej: Motomami"
+                  required
+                />
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label class="form-label fw-bold">Nombre Artista</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="artista"
+                    placeholder="Ej: Rosalía"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-bold">Año</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="anio"
+                    placeholder="2022"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-bold">País</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="pais"
+                    placeholder="Ej: España"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-bold">URL de la Foto</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="foto"
+                  placeholder="https://..."
+                  required
+                />
+              </div>
+
+              <div class="d-grid gap-2 mt-4">
+                <button type="submit" id="guardar" class="btn btn-success btn-lg">
+                  Guardar Álbum
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="albunes" class="row">
+    </div>
+    <script src="./album/album.controller.js" type="module"></script>
+    <script src="./script/app.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./artista/artista.controller.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h3>Añadir / Editar Usuario</h3>
+            <form action="">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+                <br>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="url">URL de la imagen</label>
+                <input type="url" name="url" id="url">
+            </form>
+            <button class="guardar">Guardar Usuario</button>
+        </div>
+        <div>
+            <h3>Lista de Usuarios</h3>
+            <table>
+                <tbody id="lista"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./Script/main.js"></script>
+</body>
+</html>

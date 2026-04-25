@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "nombre": "Toyota Corolla",
+    "marca": "Toyota",
+    "stock": 10,
+    "precio": 24000,
+    "imagen": "../img/Toyota-Corolla-GR-Sport-1.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Honda Civic",
+    "marca": "Honda",
+    "stock": 8,
+    "precio": 22000,
+    "imagen": "../img/Honda_Civic.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Ford Mustang",
+    "marca": "Ford",
+    "stock": 4,
+    "precio": 55000,
+    "imagen": "../img/ford-eu-S650_Nite_Pony_CG_Thumbnail_1000x667.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Volkswagen Golf",
+    "marca": "Volkswagen",
+    "stock": 12,
+    "precio": 21000,
+    "imagen": "../img/Volkswagen.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "BMW Serie 3",
+    "marca": "BMW",
+    "stock": 5,
+    "precio": 42000,
+    "imagen": "../img/BMW serie 3.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Tesla Model 3",
+    "marca": "Tesla",
+    "stock": 3,
+    "precio": 49900,
+    "imagen": "../img/Tesla Model 3.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Audi A4",
+    "marca": "Audi",
+    "stock": 6,
+    "precio": 38000,
+    "imagen": "../img/Audi A4.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Mercedes-Benz Clase C",
+    "marca": "Mercedes-Benz",
+    "stock": 7,
+    "precio": 45000,
+    "imagen": "../img/Mercedes-Benz Clase C.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Nissan Altima",
+    "marca": "Nissan",
+    "stock": 9,
+    "precio": 23000,
+    "imagen": "../img/Nissan Altima.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Chevrolet Camaro",
+    "marca": "Chevrolet",
+    "stock": 4,
+    "precio": 52000,
+    "imagen": "../img/Chevrolet Camaro.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Hyundai Tucson",
+    "marca": "Hyundai",
+    "stock": 11,
+    "precio": 27000,
+    "imagen": "../img/Hyundai Tucson.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Kia Sportage",
+    "marca": "Kia",
+    "stock": 13,
+    "precio": 25000,
+    "imagen": "../img/Kia Sportage.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Subaru Impreza",
+    "marca": "Subaru",
+    "stock": 6,
+    "precio": 28000,
+    "imagen": "../img/Subaru Impreza.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "Mazda 3",
+    "marca": "Mazda",
+    "stock": 14,
+    "precio": 22000,
+    "imagen": "../img/Mazda 3.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Volkswagen Tiguan",
+    "marca": "Volkswagen",
+    "stock": 8,
+    "precio": 30000,
+    "imagen": "../img/Volkswagen Tiguan.jpg"
+  }
+
+]

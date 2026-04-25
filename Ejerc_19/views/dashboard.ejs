@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-4" style="max-width:900px">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="h3">👋 Hola, <%= user.username %></h1>
+      <a href="/portfolio/<%= user.username %>" class="btn btn-success btn-sm">
+        <i class="bi bi-eye"></i> Ver mi portafolio
+      </a>
+    </div>
+
+    <!-- Editar Perfil -->
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h2 class="h5 border-bottom pb-2 mb-3">✏️ Editar Perfil</h2>
+        <form method="POST" action="/dashboard/profile">
+          <div class="mb-3">
+            <label class="form-label">Biografía</label>
+            <textarea name="bio" class="form-control" rows="3" placeholder="Cuéntanos sobre ti"><%= user.bio || '' %></textarea>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" value="<%= user.email %>" required />
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-save"></i> Guardar cambios
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Enlaces Sociales -->
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h2 class="h5 border-bottom pb-2 mb-3">🔗 Enlaces Sociales</h2>
+        <% if (links.length === 0) { %>
+          <p class="text-muted">No hay enlaces aún</p>
+        <% } %>
+        <% links.forEach(link => { %>
+          <div class="d-flex justify-content-between align-items-center border rounded p-2 mb-2">
+            <div>
+              <strong><i class="bi bi-link-45deg"></i> <%= link.platform %></strong>
+              <small class="text-muted d-block"><%= link.url %></small>
+            </div>
+            <form method="POST" action="/dashboard/links/<%= link.id %>/delete">
+              <button class="btn btn-danger btn-sm">
+                <i class="bi bi-trash"></i>
+              </button>
+            </form>
+          </div>
+        <% }) %>
+        <hr>
+        <h6>Añadir enlace</h6>
+        <form method="POST" action="/dashboard/links">
+          <div class="row g-2">
+            <div class="col-md-4">
+              <input type="text" name="platform" class="form-control" placeholder="Plataforma (ej. GitHub)" required />
+            </div>
+            <div class="col-md-6">
+              <input type="url" name="url" class="form-control" placeholder="URL del perfil" required />
+            </div>
+            <div class="col-md-2">
+              <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-plus-lg"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Proyectos -->
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h2 class="h5 border-bottom pb-2 mb-3">🚀 Proyectos</h2>
+        <% if (projects.length === 0) { %>
+          <p class="text-muted">No hay proyectos aún</p>
+        <% } %>
+        <% projects.forEach(project => { %>
+          <div class="border rounded p-3 mb-3">
+            <h6 class="text-primary"><%= project.title %></h6>
+            <p class="text-muted small"><%= project.description %></p>
+            <!-- Formulario editar -->
+            <form method="POST" action="/dashboard/projects/<%= project.id %>/edit" class="mb-2">
+              <div class="row g-2 mb-2">
+                <div class="col-md-6">
+                  <input type="text" name="title" class="form-control form-control-sm" value="<%= project.title %>" required />
+                </div>
+                <div class="col-md-6">
+                  <input type="url" name="repo_url" class="form-control form-control-sm" value="<%= project.repo_url || '' %>" placeholder="URL repositorio" />
+                </div>
+                <div class="col-md-6">
+                  <input type="url" name="live_url" class="form-control form-control-sm" value="<%= project.live_url || '' %>" placeholder="URL demo" />
+                </div>
+                <div class="col-md-6">
+                  <textarea name="description" class="form-control form-control-sm" rows="1"><%= project.description %></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-warning btn-sm">
+                <i class="bi bi-pencil"></i> Guardar
+              </button>
+            </form>
+            <form method="POST" action="/dashboard/projects/<%= project.id %>/delete">
+              <button class="btn btn-danger btn-sm">
+                <i class="bi bi-trash"></i> Eliminar
+              </button>
+            </form>
+          </div>
+        <% }) %>
+        <hr>
+        <h6>Añadir proyecto</h6>
+        <form method="POST" action="/dashboard/projects">
+          <div class="mb-2">
+            <input type="text" name="title" class="form-control" placeholder="Título del proyecto" required />
+          </div>
+          <div class="mb-2">
+            <textarea name="description" class="form-control" rows="2" placeholder="Descripción"></textarea>
+          </div>
+          <div class="row g-2 mb-2">
+            <div class="col-md-6">
+              <input type="url" name="repo_url" class="form-control" placeholder="URL repositorio" />
+            </div>
+            <div class="col-md-6">
+              <input type="url" name="live_url" class="form-control" placeholder="URL demo en vivo" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="bi bi-plus-lg"></i> Añadir proyecto
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

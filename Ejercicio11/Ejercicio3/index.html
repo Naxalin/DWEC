@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="catalog-container">
+        <div>
+            <label for="buscador">Buscador</label>
+            <input type="search" name="buscador" id="buscador">
+
+            <label for="categoria">Filtrar por categoría:</label>
+            <select name="categoria" id="categoria">
+                <option value="">--- Todas ---</option>
+                <option value="Electrónica">Electrónica</option>
+                <option value="Hogar">Hogar</option>
+                <option value="Deportes">Deportes</option>
+                <option value="Videojuegos">Videojuegos</option>
+                <option value="Fotografía">Fotografía</option>
+                <option value="Accesorios">Accesorios</option>
+            </select>
+            <label for="brand">Filtrar por marca:</label>
+            <select name="brand" id="brand">
+                <option value="">--- Todas ---</option>
+                <option value="TechCorp">TechCorp</option>
+                <option value="InnovatePC">InnovatePC</option>
+                <option value="HomeEssentials">HomeEssentials</option>
+                <option value="SoundMax">SoundMax</option>
+            </select>
+            <label for="ordenPrecio">Ordenar por precio:</label>
+            <select name="ordenPrecio" id="ordenPrecio">
+                <option value="">-- Selecciona --</option>
+                <option value="asc">Menor a mayor</option>
+                <option value="desc">Mayor a menor</option>
+            </select>
+
+        </div>
+        <div id="product-list"></div>
+    </div>
+
+    <script src="./Script/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

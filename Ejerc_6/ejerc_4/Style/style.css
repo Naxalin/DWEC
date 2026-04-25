@@ -1,0 +1,19 @@
+.verde{
+    background-color: green;
+}
+.rojo {
+    background-color: red;
+}
+.azul{
+    background-color: blue;
+}
+.amarillo{
+    background-color: yellow;
+}
+.morado{
+    background-color: purple;
+
+}
+.verde, .rojo, .amarillo, .azul, .morado {
+    cursor: pointer;
+}

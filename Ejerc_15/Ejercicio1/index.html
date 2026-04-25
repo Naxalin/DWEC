@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor de Imágenes</title>
+</head>
+<body>
+
+<h1>Editor de Imágenes</h1>
+
+<h2>Carga de Archivos</h2>
+<div id="drop-zone">Arrastra y suelta tus imágenes aquí</div>
+<input type="file" id="fileInput" multiple style="display:none">
+<div id="preview"></div>
+
+
+<div id="preview"></div>
+
+<h2>Opciones de Edición</h2>
+<form id="edit-options">
+    <label for="watermark">Marca de agua:</label>
+    <input type="text" id="watermark" name="watermark" placeholder="© Mi App"><br><br>
+
+    <label for="max-width">Ancho máximo:</label>
+    <input type="number" id="max-width" name="max-width" placeholder="px"><br><br>
+
+    <label for="output-format">Formato de salida:</label>
+    <select id="output-format" name="output-format">
+        <option value="image/png">PNG</option>
+        <option value="image/jpeg">JPEG</option>
+    </select>
+</form>
+
+<button id="process-btn">Procesar Imágenes</button>
+
+<h2>Resultados</h2>
+<div id="downloads"></div>
+<script src="./Script/app.js"></script>
+</body>
+</html>

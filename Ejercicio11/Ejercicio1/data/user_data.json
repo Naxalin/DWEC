@@ -1,0 +1,212 @@
+ [
+  {
+    "id": "USER001",
+    "personalInfo": {
+      "firstName": "Ana",
+      "lastName": "García Pérez",
+      "email": "ana.garcia@example.com",
+      "phone": "+34 600 123 456"
+    },
+    "address": {
+      "street": "Calle Mayor 123",
+      "city": "Madrid",
+      "zipCode": "28001",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "language": "es"
+    },
+    "hobbies": ["Lectura", "Senderismo", "Cocina"]
+  },
+  {
+    "id": "USER002",
+    "personalInfo": {
+      "firstName": "Carlos",
+      "lastName": "López Fernández",
+      "email": "carlos.lopez@example.com",
+      "phone": "+34 601 987 654"
+    },
+    "address": {
+      "street": "Avenida de la Constitución 45",
+      "city": "Sevilla",
+      "zipCode": "41004",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": false,
+      "language": "es"
+    },
+    "hobbies": ["Fútbol", "Viajar", "Fotografía"]
+  },
+  {
+    "id": "USER003",
+    "personalInfo": {
+      "firstName": "Lucía",
+      "lastName": "Martínez Gómez",
+      "email": "lucia.martinez@example.com",
+      "phone": "+34 602 111 222"
+    },
+    "address": {
+      "street": "Calle de la Paz 12",
+      "city": "Valencia",
+      "zipCode": "46002",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "language": "en"
+    },
+    "hobbies": ["Yoga", "Lectura", "Pintura"]
+  },
+  {
+    "id": "USER004",
+    "personalInfo": {
+      "firstName": "Javier",
+      "lastName": "Ruiz Ortega",
+      "email": "javier.ruiz@example.com",
+      "phone": "+34 603 222 333"
+    },
+    "address": {
+      "street": "Calle San Juan 87",
+      "city": "Bilbao",
+      "zipCode": "48005",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": true,
+      "language": "es"
+    },
+    "hobbies": ["Ciclismo", "Videojuegos", "Cocina"]
+  },
+  {
+    "id": "USER005",
+    "personalInfo": {
+      "firstName": "María",
+      "lastName": "Navarro López",
+      "email": "maria.navarro@example.com",
+      "phone": "+34 604 444 555"
+    },
+    "address": {
+      "street": "Calle del Sol 34",
+      "city": "Granada",
+      "zipCode": "18009",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "dark",
+      "notifications": false,
+      "language": "es"
+    },
+    "hobbies": ["Bailar", "Cine", "Fotografía"]
+  },
+  {
+    "id": "USER006",
+    "personalInfo": {
+      "firstName": "David",
+      "lastName": "Castro Romero",
+      "email": "david.castro@example.com",
+      "phone": "+34 605 555 666"
+    },
+    "address": {
+      "street": "Calle Nueva 56",
+      "city": "Málaga",
+      "zipCode": "29001",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": true,
+      "language": "en"
+    },
+    "hobbies": ["Surf", "Senderismo", "Tecnología"]
+  },
+  {
+    "id": "USER007",
+    "personalInfo": {
+      "firstName": "Sofía",
+      "lastName": "Moreno Díaz",
+      "email": "sofia.moreno@example.com",
+      "phone": "+34 606 777 888"
+    },
+    "address": {
+      "street": "Paseo del Prado 9",
+      "city": "Madrid",
+      "zipCode": "28014",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "language": "es"
+    },
+    "hobbies": ["Lectura", "Arte", "Jardinería"]
+  },
+  {
+    "id": "USER008",
+    "personalInfo": {
+      "firstName": "Alejandro",
+      "lastName": "Santos Vega",
+      "email": "alejandro.santos@example.com",
+      "phone": "+34 607 888 999"
+    },
+    "address": {
+      "street": "Calle de los Olivos 25",
+      "city": "Zaragoza",
+      "zipCode": "50001",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": false,
+      "language": "es"
+    },
+    "hobbies": ["Escalada", "Viajar", "Música"]
+  },
+  {
+    "id": "USER009",
+    "personalInfo": {
+      "firstName": "Elena",
+      "lastName": "Domínguez Torres",
+      "email": "elena.dominguez@example.com",
+      "phone": "+34 608 999 000"
+    },
+    "address": {
+      "street": "Avenida del Mar 18",
+      "city": "Alicante",
+      "zipCode": "03001",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "dark",
+      "notifications": true,
+      "language": "fr"
+    },
+    "hobbies": ["Natación", "Lectura", "Viajar"]
+  },
+  {
+    "id": "USER010",
+    "personalInfo": {
+      "firstName": "Pablo",
+      "lastName": "Jiménez León",
+      "email": "pablo.jimenez@example.com",
+      "phone": "+34 609 111 222"
+    },
+    "address": {
+      "street": "Camino Real 42",
+      "city": "Oviedo",
+      "zipCode": "33001",
+      "country": "España"
+    },
+    "preferences": {
+      "theme": "light",
+      "notifications": true,
+      "language": "es"
+    },
+    "hobbies": ["Fútbol", "Ajedrez", "Programación"]
+  }
+]

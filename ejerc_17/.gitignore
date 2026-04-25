@@ -1,0 +1,20 @@
+# Dependencias (Nunca se suben, son pesadísimas)
+node_modules/
+jspm_packages/
+
+# Logs (Los archivos que configuramos con Morgan)
+logs/
+*.log
+npm-debug.log*
+
+# Variables de entorno (Contienen contraseñas y llaves secretas)
+.env
+.env.local
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Carpetas de compilación (Si usas TypeScript o algún bundler)
+dist/
+build/

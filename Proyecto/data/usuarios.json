@@ -1,0 +1,56 @@
+[
+  {
+    "nombre": "Juan",
+    "apellidos": "Pérez",
+    "correo": "juan.perez@example.com",
+    "contraseña": "Pass1234!",
+    "telefono": "+34600111222",
+    "direccion": "Calle Falsa 123, Madrid",
+    "metodoPago": "Tarjeta"
+  },
+  {
+    "nombre": "María",
+    "apellidos": "López",
+    "correo": "maria.lopez@example.com",
+    "contraseña": "MiClave2025",
+    "telefono": "+34600222333",
+    "direccion": "Avenida Siempre Viva 45, Barcelona",
+    "metodoPago": "PayPal"
+  },
+  {
+    "nombre": "Carlos",
+    "apellidos": "Sánchez",
+    "correo": "carlos.sanchez@example.com",
+    "contraseña": "Seguro@123",
+    "telefono": "+34600333444",
+    "direccion": "Plaza Mayor 10, Valencia",
+    "metodoPago": "ContraEntrega"
+  },
+  {
+    "nombre": "Ana",
+    "apellidos": "Gómez",
+    "correo": "ana.gomez@example.com",
+    "contraseña": "ClaveFuerte!9",
+    "telefono": "+34600444555",
+    "direccion": "Calle del Sol 7, Sevilla",
+    "metodoPago": "Tarjeta"
+  },
+  {
+    "nombre": "Luis",
+    "apellidos": "Ramírez",
+    "correo": "luis.ramirez@example.com",
+    "contraseña": "12345Abc!",
+    "telefono": "+34600555666",
+    "direccion": "Avenida Central 99, Bilbao",
+    "metodoPago": "PayPal"
+  },
+  {
+    "nombre": "Admin",
+    "apellidos": "Admin",
+    "correo": "admin@admin.com",
+    "contraseña": "admin",
+    "telefono": "+34600666777",
+    "direccion": "Calle Admin 1, Madrid",
+    "metodoPago": "Tarjeta"
+  }
+]

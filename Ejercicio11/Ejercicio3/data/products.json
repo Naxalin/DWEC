@@ -1,0 +1,134 @@
+[
+  {
+    "id": "PROD001",
+    "name": "Smartphone X",
+    "description": "Potente smartphone con cámara de 108MP y batería de larga duración.",
+    "price": 699.99,
+    "category": "Electrónica",
+    "brand": "TechCorp",
+    "rating": 4.5,
+    "stock": 50,
+    "imageUrl": "https://example.com/smartphone_x.jpg"
+  },
+  {
+    "id": "PROD002",
+    "name": "Laptop UltraBook",
+    "description": "Diseño ligero y alto rendimiento para profesionales.",
+    "price": 1299.99,
+    "category": "Electrónica",
+    "brand": "InnovatePC",
+    "rating": 4.8,
+    "stock": 25,
+    "imageUrl": "https://example.com/laptop_ultrabook.jpg"
+  },
+  {
+    "id": "PROD003",
+    "name": "Cafetera Espresso",
+    "description": "Prepara tu café favorito en minutos con calidad profesional.",
+    "price": 129.00,
+    "category": "Hogar",
+    "brand": "HomeEssentials",
+    "rating": 4.2,
+    "stock": 100,
+    "imageUrl": "https://example.com/cafetera_espresso.jpg"
+  },
+  {
+    "id": "PROD004",
+    "name": "Auriculares NoiseCancel Pro",
+    "description": "Auriculares inalámbricos con cancelación activa de ruido y sonido envolvente.",
+    "price": 249.99,
+    "category": "Electrónica",
+    "brand": "SoundMax",
+    "rating": 4.6,
+    "stock": 75,
+    "imageUrl": "https://example.com/auriculares_noisecancel.jpg"
+  },
+  {
+    "id": "PROD005",
+    "name": "Smartwatch FitPlus",
+    "description": "Reloj inteligente con monitoreo de ritmo cardíaco, oxígeno y sueño.",
+    "price": 199.99,
+    "category": "Electrónica",
+    "brand": "TechCorp",
+    "rating": 4.3,
+    "stock": 60,
+    "imageUrl": "https://example.com/smartwatch_fitplus.jpg"
+  },
+  {
+    "id": "PROD006",
+    "name": "Aspiradora Robot Clean360",
+    "description": "Robot aspirador con mapeo inteligente y control por app.",
+    "price": 349.99,
+    "category": "Hogar",
+    "brand": "HomeEssentials",
+    "rating": 4.7,
+    "stock": 40,
+    "imageUrl": "https://example.com/robot_clean360.jpg"
+  },
+  {
+    "id": "PROD007",
+    "name": "Televisor 4K 55” VisionPro",
+    "description": "Televisor UHD con HDR10+ y sistema Smart integrado.",
+    "price": 899.99,
+    "category": "Electrónica",
+    "brand": "VisionTech",
+    "rating": 4.4,
+    "stock": 30,
+    "imageUrl": "https://example.com/tv_visionpro.jpg"
+  },
+  {
+    "id": "PROD008",
+    "name": "Set de Sartenes Antiadherentes",
+    "description": "Juego de 3 sartenes de aluminio reforzado con revestimiento cerámico.",
+    "price": 89.99,
+    "category": "Hogar",
+    "brand": "CookMaster",
+    "rating": 4.1,
+    "stock": 120,
+    "imageUrl": "https://example.com/sartenes_antiadherentes.jpg"
+  },
+  {
+    "id": "PROD009",
+    "name": "Consola GameBox X",
+    "description": "Consola de videojuegos de última generación con 1TB de almacenamiento.",
+    "price": 599.99,
+    "category": "Videojuegos",
+    "brand": "PlayZone",
+    "rating": 4.9,
+    "stock": 20,
+    "imageUrl": "https://example.com/consola_gamebox_x.jpg"
+  },
+  {
+    "id": "PROD010",
+    "name": "Bicicleta Eléctrica UrbanRide",
+    "description": "Bicicleta eléctrica plegable con autonomía de 60 km.",
+    "price": 1099.00,
+    "category": "Deportes",
+    "brand": "EcoMotion",
+    "rating": 4.6,
+    "stock": 15,
+    "imageUrl": "https://example.com/bicicleta_urbanride.jpg"
+  },
+  {
+    "id": "PROD011",
+    "name": "Cámara Reflex ProShot D500",
+    "description": "Cámara profesional con sensor APS-C y lente intercambiable.",
+    "price": 1499.99,
+    "category": "Fotografía",
+    "brand": "OptiCam",
+    "rating": 4.8,
+    "stock": 10,
+    "imageUrl": "https://example.com/camara_proshot_d500.jpg"
+  },
+  {
+    "id": "PROD012",
+    "name": "Mochila Antirrobo TravelSafe",
+    "description": "Mochila con compartimentos ocultos y puerto USB integrado.",
+    "price": 69.99,
+    "category": "Accesorios",
+    "brand": "UrbanGear",
+    "rating": 4.5,
+    "stock": 80,
+    "imageUrl": "https://example.com/mochila_travelsafe.jpg"
+  }
+]

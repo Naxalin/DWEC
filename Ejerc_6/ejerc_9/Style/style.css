@@ -1,0 +1,18 @@
+/* Contenedor de la cuadrícula */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;      /* ancho fijo */
+  height: 800px;     /* cuadrado perfecto */
+  margin: 20px auto;
+}
+
+/* Cada celda */
+.grid > div {
+  width: calc(100% / 200);   /* 40 columnas */
+  height: calc(100% / 200);  /* 40 filas */
+  background-color: white;  /* color inicial verde */
+  border: 1px solid #000;   /* borde finito negro para ver cada celda */
+  box-sizing: border-box;
+  cursor: pointer;          /* para indicar que se puede pintar */
+}

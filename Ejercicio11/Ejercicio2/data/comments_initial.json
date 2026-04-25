@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "user": "María",
+    "comment": "Me encantó el artículo 😍"
+  },
+  {
+    "id": 2,
+    "user": "Pedro",
+    "comment": "Podrías hablar más sobre el tema de los eventos."
+  }
+]

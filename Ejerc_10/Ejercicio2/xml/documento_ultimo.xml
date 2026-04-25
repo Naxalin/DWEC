@@ -1,0 +1,9 @@
+<documento>
+    <id>3</id>
+    <titulo>Declaración de Independencia</titulo>
+    <fecha>1776</fecha>
+    <imagen>img/doc1.jpg</imagen>
+    <descripcion>Texto fundamental de la historia de EE.UU.</descripcion>
+    <siguiente>null</siguiente>
+    <anterior>documento_2.xml</anterior>
+</documento>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div id="galeria">
+  <img id="imagen-principal" src="https://picsum.photos/400/300?random=5" alt="Imagen principal" />
+  <br><br>
+  <div id="miniaturas">
+    <img class="miniatura" src="https://picsum.photos/400/300?random=1" data-full="imagenes/grande1.jpg" alt="Miniatura 1" tabindex="0" />
+    <img class="miniatura" src="https://picsum.photos/400/300?random=2" data-full="imagenes/grande2.jpg" alt="Miniatura 2" tabindex="0" />
+    <img class="miniatura" src="https://picsum.photos/400/300?random=3" data-full="imagenes/grande3.jpg" alt="Miniatura 3" tabindex="0" />
+    <img class="miniatura" src="https://picsum.photos/400/300?random=4" data-full="imagenes/grande4.jpg" alt="Miniatura 4" tabindex="0" />
+  </div>
+  <button onclick="cambiarImagenPrincipal(3);">Cambiar a Miniatura 4</button>
+  <button onclick="cambiarImagenPrincipal(1);">Cambiar a Miniatura 1</button>
+    <button onclick="cambiarImagenPrincipal(4);">Cambiar a Miniatura 3</button>
+ <button onclick="cambiarImagenPrincipal(2);">Cambiar a Miniatura 2</button> 
+
+ <button onclick=" resaltarMiniatura()">resaltar</button>
+</div>
+<script src="Script/script_1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+[
+  {
+    "questionId": "Q001",
+    "text": "¿Cuál NO es un tipo de petición HTTP comúnmente usado en AJAX?",
+    "options": [
+      {"id": "A", "text": "GET"},
+      {"id": "B", "text": "POST"},
+      {"id": "C", "text": "PULL"},
+      {"id": "D", "text": "PUT"}
+    ],
+    "correctAnswer": "C",
+    "explanation": "PULL no es un método HTTP estándar; GET, POST, PUT, DELETE son los más comunes."
+  },
+  {
+    "questionId": "Q002",
+    "text": "¿Qué método se utiliza para 'parsear' una cadena JSON a un objeto JavaScript?",
+    "options": [
+      {"id": "A", "text": "JSON.toObject()"},
+      {"id": "B", "text": "JSON.parse()"},
+      {"id": "C", "text": "JSON.stringify()"},
+      {"id": "D", "text": "JSON.decode()"}
+    ],
+    "correctAnswer": "B",
+    "explanation": "JSON.parse() convierte una cadena JSON en un objeto JavaScript."
+  },
+  {
+    "questionId": "Q003",
+    "text": "¿Cuál de las siguientes promesas se resuelve automáticamente después de 2 segundos?",
+    "options": [
+      {"id": "A", "text": "setTimeout()"},
+      {"id": "B", "text": "Promise.resolve()"},
+      {"id": "C", "text": "new Promise() con setTimeout"},
+      {"id": "D", "text": "fetch()"}
+    ],
+    "correctAnswer": "C",
+    "explanation": "Se puede crear una promesa que se resuelva con setTimeout después de un tiempo determinado."
+  },
+  {
+    "questionId": "Q004",
+    "text": "¿Qué propiedad de fetch contiene el código de estado HTTP?",
+    "options": [
+      {"id": "A", "text": "response.status"},
+      {"id": "B", "text": "response.code"},
+      {"id": "C", "text": "response.httpStatus"},
+      {"id": "D", "text": "response.state"}
+    ],
+    "correctAnswer": "A",
+    "explanation": "response.status devuelve el código HTTP de la respuesta."
+  },
+  {
+    "questionId": "Q005",
+    "text": "¿Cuál de los siguientes es un método válido para manejar errores en promesas?",
+    "options": [
+      {"id": "A", "text": "catch()"},
+      {"id": "B", "text": "error()"},
+      {"id": "C", "text": "thenError()"},
+      {"id": "D", "text": "fail()"}
+    ],
+    "correctAnswer": "A",
+    "explanation": "catch() se usa para manejar errores en promesas en JavaScript."
+  },
+  {
+    "questionId": "Q006",
+    "text": "En fetch, ¿cómo se obtiene el cuerpo de la respuesta como JSON?",
+    "options": [
+      {"id": "A", "text": "response.toJSON()"},
+      {"id": "B", "text": "response.json()"},
+      {"id": "C", "text": "JSON.parse(response)"},
+      {"id": "D", "text": "response.data()"}
+    ],
+    "correctAnswer": "B",
+    "explanation": "response.json() devuelve una promesa que se resuelve con el objeto JSON de la respuesta."
+  },
+  {
+    "questionId": "Q007",
+    "text": "¿Cuál es la forma correcta de declarar una función asíncrona en JavaScript?",
+    "options": [
+      {"id": "A", "text": "async function miFuncion() {}"},
+      {"id": "B", "text": "function async miFuncion() {}"},
+      {"id": "C", "text": "function miFuncion() async {}"},
+      {"id": "D", "text": "asynchronous function miFuncion() {}"}
+    ],
+    "correctAnswer": "A",
+    "explanation": "La palabra clave async se coloca antes de function para declarar una función asíncrona."
+  },
+  {
+    "questionId": "Q008",
+    "text": "¿Qué palabra clave se usa para esperar que una promesa se resuelva dentro de una función async?",
+    "options": [
+      {"id": "A", "text": "wait"},
+      {"id": "B", "text": "await"},
+      {"id": "C", "text": "resolve"},
+      {"id": "D", "text": "then"}
+    ],
+    "correctAnswer": "B",
+    "explanation": "await se usa dentro de funciones async para pausar la ejecución hasta que la promesa se resuelva."
+  },
+  {
+    "questionId": "Q009",
+    "text": "¿Cuál es el resultado de ejecutar fetch en una URL incorrecta?",
+    "options": [
+      {"id": "A", "text": "Devuelve null"},
+      {"id": "B", "text": "La promesa se rechaza"},
+      {"id": "C", "text": "Devuelve un objeto vacío"},
+      {"id": "D", "text": "Se lanza una excepción sin promesa"}
+    ],
+    "correctAnswer": "B",
+    "explanation": "Si la URL es incorrecta o no se puede establecer conexión, la promesa de fetch se rechaza y puede ser atrapada con catch()."
+  },
+  {
+    "questionId": "Q010",
+    "text": "¿Qué método se utiliza para convertir un objeto JavaScript en una cadena JSON?",
+    "options": [
+      {"id": "A", "text": "JSON.stringify()"},
+      {"id": "B", "text": "JSON.parse()"},
+      {"id": "C", "text": "JSON.toString()"},
+      {"id": "D", "text": "JSON.encode()"}
+    ],
+    "correctAnswer": "A",
+    "explanation": "JSON.stringify() convierte un objeto JavaScript en una cadena JSON."
+  }
+]
