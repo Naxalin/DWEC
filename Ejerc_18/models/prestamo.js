@@ -1,4 +1,4 @@
-const db = require('../config/db');
+const pool = require('../config/db');
 
 const Prestamo = {
   getByLibroId: (libro_id) => {
