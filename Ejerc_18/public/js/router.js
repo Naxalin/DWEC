@@ -30,11 +30,15 @@ function navegar(url) {
   manejarRuta(window.location.pathname);
 }
 
-document.querySelectorAll('[data-link]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    navegar(link.getAttribute('href'));
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[data-link]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      navegar(link.getAttribute('href'));
+    });
   });
+
+  manejarRuta(window.location.pathname);
 });
 
 window.addEventListener('popstate', () => {
@@ -42,5 +46,3 @@ window.addEventListener('popstate', () => {
 });
 
 window.navegar = navegar;
-
-manejarRuta(window.location.pathname);
