@@ -1,19 +1,12 @@
 {
-  "outputDirectory": "public",
-  "builds": [
+  "rewrites": [
     {
-      "src": "app.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "app.js"
+      "source": "/api/:path*",
+      "destination": "/app.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "app.js"
+      "source": "/:path*",
+      "destination": "/app.js"
     }
   ]
 }
