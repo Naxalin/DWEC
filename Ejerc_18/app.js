@@ -7,18 +7,26 @@ const libroRoutes = require('./routes/libroRoutes');
 
 const app = express();
 
-const logStream = fs.createWriteStream(
-  path.join(__dirname, 'logs', 'access.log'),
-  { flags: 'a' }
-);
+const isVercel = process.env.VERCEL === '1';
 
-app.use(morgan('combined', { stream: logStream }));
+if (!isVercel) {
+  const logDir = path.join(__dirname, 'logs');
+  if (!fs.existsSync(logDir)) fs.mkdirSync(logDir);
+  const logStream = fs.createWriteStream(
+    path.join(logDir, 'access.log'),
+    { flags: 'a' }
+  );
+  app.use(morgan('combined', { stream: logStream }));
+} else {
+  app.use(morgan('combined'));
+}
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', libroRoutes);
 
-app.get('*', (req, res) => {
+app.get('(.*)', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
@@ -26,3 +34,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+module.exports = app;
