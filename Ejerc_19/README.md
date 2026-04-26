@@ -1,1 +1,1 @@
-https://dwec-iakz.vercel.app/login
+https://dwec-ty3e.vercel.app/login
