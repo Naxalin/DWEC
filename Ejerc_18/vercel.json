@@ -1,9 +1,23 @@
 {
-  "outputDirectory": "public",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "app.js"
+    },
+    {
+      "src": "/(.*\\.(css|js|png|jpg|ico|svg|woff|woff2))",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "app.js"
     }
   ]
 }
