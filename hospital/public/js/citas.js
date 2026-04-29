@@ -1,6 +1,3 @@
-// ==========================================
-// CITAS — Listado con filtros
-// ==========================================
 
 async function renderCitas() {
   showLoading();

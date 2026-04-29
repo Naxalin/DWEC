@@ -1,6 +1,3 @@
-// ==========================================
-// MÉDICO — Ficha detalle + sus citas
-// ==========================================
 
 async function renderMedicoDetalle(id) {
   showLoading();

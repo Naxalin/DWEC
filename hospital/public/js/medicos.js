@@ -1,6 +1,3 @@
-// ==========================================
-// MÉDICOS — Listado con filtros
-// ==========================================
 
 async function renderMedicos() {
   showLoading();

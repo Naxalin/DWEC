@@ -1,13 +1,10 @@
-// ==========================================
-// PACIENTES — Listado
-// ==========================================
-
 async function renderPacientes() {
   showLoading();
   try {
     setApp(`
       <div class="page-header">
         <h1 class="page-title">Pacientes</h1>
+        <a href="#/pacientes/nuevo" class="btn btn-primary">+ Nuevo paciente</a>
       </div>
 
       <div class="filters">
@@ -17,7 +14,7 @@ async function renderPacientes() {
         </div>
         <div class="filter-group" style="justify-content:flex-end">
           <label>&nbsp;</label>
-          <button class="btn btn-secondary" onclick="cargarPacientes()">Filtrar</button>
+          <button class="btn btn-secondary" id="btn-filtrar">Filtrar</button>
         </div>
       </div>
 
@@ -26,6 +23,7 @@ async function renderPacientes() {
       </div>
     `);
 
+    document.getElementById('btn-filtrar').addEventListener('click', cargarPacientes);
     document.getElementById('f-buscar').addEventListener('keydown', e => {
       if (e.key === 'Enter') cargarPacientes();
     });
@@ -72,7 +70,9 @@ async function cargarPacientes() {
               <td>${p.telefono || '—'}</td>
               <td>${p.fecha_nacimiento ? new Date(p.fecha_nacimiento).toLocaleDateString('es-ES') : '—'}</td>
               <td>
-                <a href="#/pacientes/${p.id}" class="btn btn-secondary btn-sm">Ver ficha</a>
+                <a href="#/pacientes/${p.id}" class="btn btn-secondary btn-sm">Ver</a>
+                <a href="#/pacientes/editar/${p.id}" class="btn btn-secondary btn-sm">Editar</a>
+                <button class="btn btn-danger btn-sm" onclick="eliminarPaciente(${p.id})">Eliminar</button>
               </td>
             </tr>
           `).join('')}
@@ -83,3 +83,15 @@ async function cargarPacientes() {
     contenedor.innerHTML = `<div class="alert alert-error">${err.message}</div>`;
   }
 }
+
+async function eliminarPaciente(id) {
+  if (!confirmDelete('¿Seguro que quieres eliminar este paciente? Se eliminarán también sus citas.')) return;
+  try {
+    await apiFetch(`/api/pacientes/${id}`, { method: 'DELETE' });
+    await cargarPacientes();
+  } catch (err) {
+    alert('Error al eliminar: ' + err.message);
+  }
+}
+
+window.eliminarPaciente = eliminarPaciente;

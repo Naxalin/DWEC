@@ -1,7 +1,3 @@
-// ==========================================
-// VALORACIÓN — Formulario alta / edición (MongoDB)
-// ==========================================
-
 async function renderValoracionForm(id = null) {
   showLoading();
   try {

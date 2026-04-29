@@ -1,6 +1,3 @@
-// ==========================================
-// VALORACIÓN — Ficha detalle (MongoDB)
-// ==========================================
 
 async function renderValoracionDetalle(id) {
   showLoading();

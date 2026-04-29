@@ -1,6 +1,3 @@
-// ==========================================
-// MÉDICO — Formulario alta / edición
-// ==========================================
 
 async function renderMedicoForm(id = null) {
   showLoading();

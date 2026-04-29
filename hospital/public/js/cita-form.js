@@ -1,6 +1,3 @@
-// ==========================================
-// CITA — Formulario alta / edición
-// ==========================================
 
 async function renderCitaForm(id = null) {
   showLoading();

@@ -1,8 +1,3 @@
-// ==========================================
-// PACIENTE — Ficha detalle + todas sus citas
-// Navegación contextual: paciente → citas → médico
-// ==========================================
-
 async function renderPacienteDetalle(id) {
   showLoading();
   try {

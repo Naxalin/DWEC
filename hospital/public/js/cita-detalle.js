@@ -1,6 +1,3 @@
-// ==========================================
-// CITA — Ficha detalle (navegación contextual 2)
-// ==========================================
 
 async function renderCitaDetalle(id) {
   showLoading();
