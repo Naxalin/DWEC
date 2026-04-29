@@ -1,10 +1,11 @@
-const Paciente = require('../models/Paciente');
+const getPaciente = require('../models/Paciente');
 const { Op } = require('sequelize');
 
 const pacienteController = {
 
   index: async (req, res) => {
     try {
+      const Paciente = getPaciente();
       const { buscar } = req.query;
       const where = {};
       if (buscar && buscar !== '') {
@@ -24,6 +25,7 @@ const pacienteController = {
 
   show: async (req, res) => {
     try {
+      const Paciente = getPaciente();
       const paciente = await Paciente.findByPk(req.params.id, {
         include: [{ association: 'citas', include: ['medico'] }]
       });
