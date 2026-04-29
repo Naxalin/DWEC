@@ -1,10 +1,14 @@
 const { DataTypes } = require('sequelize');
 const { getSequelize } = require('../config/db.mysql');
 
-const defineMedico = () => {
+let Medico = null;
+
+const getMedico = () => {
+  if (Medico) return Medico;
+
   const sequelize = getSequelize();
 
-  return sequelize.define('Medico', {
+  Medico = sequelize.define('Medico', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -41,6 +45,8 @@ const defineMedico = () => {
     tableName: 'medicos',
     timestamps: false
   });
+
+  return Medico;
 };
 
-module.exports = defineMedico;
+module.exports = getMedico;
