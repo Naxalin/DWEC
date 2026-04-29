@@ -1,0 +1,132 @@
+[
+  {
+    "id_cita": 1,
+    "id_paciente": 1,
+    "id_medico": 1,
+    "puntuacion": 5,
+    "comentario": "El Dr. Martínez fue muy atento y explicó todo con claridad. Muy satisfecha con la consulta.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-02T11:00:00.000Z" }
+  },
+  {
+    "id_cita": 2,
+    "id_paciente": 2,
+    "id_medico": 1,
+    "puntuacion": 4,
+    "comentario": "Buena atención, aunque la espera fue algo larga. El diagnóstico fue acertado.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-03T12:30:00.000Z" }
+  },
+  {
+    "id_cita": 3,
+    "id_paciente": 3,
+    "id_medico": 2,
+    "puntuacion": 5,
+    "comentario": "Excelente profesional. Me sentí muy bien atendida y con todas las dudas resueltas.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-04T13:00:00.000Z" }
+  },
+  {
+    "id_cita": 4,
+    "id_paciente": 4,
+    "id_medico": 3,
+    "puntuacion": 3,
+    "comentario": "Correcta la atención, pero me pareció algo apresurado. Esperaba más explicaciones.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-05T10:00:00.000Z" }
+  },
+  {
+    "id_cita": 6,
+    "id_paciente": 6,
+    "id_medico": 5,
+    "puntuacion": 5,
+    "comentario": "El Dr. Torres es un gran profesional. Me ayudó mucho con el dolor de espalda.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-09T14:00:00.000Z" }
+  },
+  {
+    "id_cita": 7,
+    "id_paciente": 7,
+    "id_medico": 5,
+    "puntuacion": 4,
+    "comentario": "Muy buen seguimiento de la fractura. Recuperación mejor de lo esperado.",
+    "anonima": true,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-10T11:30:00.000Z" }
+  },
+  {
+    "id_cita": 8,
+    "id_paciente": 8,
+    "id_medico": 6,
+    "puntuacion": 2,
+    "comentario": "No me convencio el diagnóstico. Tuve que buscar una segunda opinión.",
+    "anonima": true,
+    "estado": "Pendiente",
+    "fecha_creacion": { "$date": "2025-06-11T10:30:00.000Z" }
+  },
+  {
+    "id_cita": 10,
+    "id_paciente": 10,
+    "id_medico": 7,
+    "puntuacion": 5,
+    "comentario": "El Dr. Molina identificó el problema rápidamente. Tratamiento muy efectivo.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-13T09:30:00.000Z" }
+  },
+  {
+    "id_cita": 11,
+    "id_paciente": 11,
+    "id_medico": 8,
+    "puntuacion": 5,
+    "comentario": "La Dra. Delgado lleva mi tratamiento con mucha dedicación y profesionalidad. Muy agradecida.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-16T12:00:00.000Z" }
+  },
+  {
+    "id_cita": 12,
+    "id_paciente": 12,
+    "id_medico": 1,
+    "puntuacion": 4,
+    "comentario": "Buena consulta, el médico explicó bien las opciones de tratamiento.",
+    "anonima": true,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-17T10:30:00.000Z" }
+  },
+  {
+    "id_cita": 13,
+    "id_paciente": 1,
+    "id_medico": 2,
+    "puntuacion": 3,
+    "comentario": "La consulta fue correcta pero el tiempo de espera fue excesivo.",
+    "anonima": false,
+    "estado": "Pendiente",
+    "fecha_creacion": { "$date": "2025-06-18T13:00:00.000Z" }
+  },
+  {
+    "id_cita": 14,
+    "id_paciente": 2,
+    "id_medico": 3,
+    "puntuacion": 5,
+    "comentario": "El Dr. García es fantástico con los niños. Mi hijo salió muy tranquilo de la consulta.",
+    "anonima": false,
+    "estado": "Publicada",
+    "fecha_creacion": { "$date": "2025-06-19T10:30:00.000Z" }
+  },
+  {
+    "id_cita": 1,
+    "id_paciente": 3,
+    "id_medico": 1,
+    "puntuacion": 1,
+    "comentario": "Muy mala experiencia. El médico no escuchó mis preocupaciones.",
+    "anonima": true,
+    "estado": "Ocultada",
+    "fecha_creacion": { "$date": "2025-06-20T09:00:00.000Z" }
+  }
+]
