@@ -6,6 +6,7 @@ const routes = {
   '/medicos':              () => renderMedicos(),
   '/medicos/nuevo':        () => renderMedicoForm(),
   '/pacientes':            () => renderPacientes(),
+  '/pacientes/nuevo':      () => renderPacienteForm(),
   '/citas':                () => renderCitas(),
   '/citas/nuevo':          () => renderCitaForm(),
   '/valoraciones':         () => renderValoraciones(),
@@ -24,7 +25,6 @@ function navigate(hash) {
 async function router() {
   const path = getRoute();
 
-  // Marcar nav-link activo
   document.querySelectorAll('.nav-link').forEach(link => {
     link.classList.remove('active');
     const linkHash = link.getAttribute('href').replace('#', '');
@@ -33,12 +33,12 @@ async function router() {
     }
   });
 
-  // Rutas con parámetros dinámicos
   const medicoDetalleMatch    = path.match(/^\/medicos\/(\d+)$/);
   const medicoEditarMatch     = path.match(/^\/medicos\/editar\/(\d+)$/);
   const citaDetalleMatch      = path.match(/^\/citas\/(\d+)$/);
   const citaEditarMatch       = path.match(/^\/citas\/editar\/(\d+)$/);
   const pacienteDetalleMatch  = path.match(/^\/pacientes\/(\d+)$/);
+  const pacienteEditarMatch   = path.match(/^\/pacientes\/editar\/(\d+)$/);
   const valoracionDetalleMatch= path.match(/^\/valoraciones\/([a-f0-9]+)$/);
   const valoracionEditarMatch = path.match(/^\/valoraciones\/editar\/([a-f0-9]+)$/);
 
@@ -46,11 +46,11 @@ async function router() {
   if (medicoDetalleMatch)     return renderMedicoDetalle(medicoDetalleMatch[1]);
   if (citaEditarMatch)        return renderCitaForm(citaEditarMatch[1]);
   if (citaDetalleMatch)       return renderCitaDetalle(citaDetalleMatch[1]);
+  if (pacienteEditarMatch)    return renderPacienteForm(pacienteEditarMatch[1]);
   if (pacienteDetalleMatch)   return renderPacienteDetalle(pacienteDetalleMatch[1]);
   if (valoracionEditarMatch)  return renderValoracionForm(valoracionEditarMatch[1]);
   if (valoracionDetalleMatch) return renderValoracionDetalle(valoracionDetalleMatch[1]);
 
-  // Rutas estáticas
   const handler = routes[path];
   if (handler) {
     handler();
@@ -58,10 +58,6 @@ async function router() {
     render404();
   }
 }
-
-// ==========================================
-// UTILIDADES GLOBALES
-// ==========================================
 
 function setApp(html) {
   app.innerHTML = html;
@@ -131,8 +127,5 @@ async function apiFetch(url, options = {}) {
   return data;
 }
 
-// ==========================================
-// ARRANQUE
-// ==========================================
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);
