@@ -4,7 +4,6 @@ const { getSequelize, connectMySQL } = require('./config/db.mysql');
 const { connectMongo } = require('./config/db.mongo');
 
 getSequelize();
-require('./models/associations')();
 
 const express = require('express');
 const cors = require('cors');
@@ -28,7 +27,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Conexiones async en background
 connectMySQL().catch(console.error);
 connectMongo().catch(console.error);
 
