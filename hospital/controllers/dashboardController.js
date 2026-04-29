@@ -1,6 +1,6 @@
-const Medico = require('../models/Medico');
-const Paciente = require('../models/Paciente');
-const Cita = require('../models/Cita');
+const getMedico = require('../models/Medico');
+const getPaciente = require('../models/Paciente');
+const getCita = require('../models/Cita');
 const Valoracion = require('../models/Valoracion');
 const { Op } = require('sequelize');
 
@@ -8,6 +8,10 @@ const dashboardController = {
 
   index: async (req, res) => {
     try {
+      const Medico = getMedico();
+      const Paciente = getPaciente();
+      const Cita = getCita();
+
       const hoy = new Date();
       const inicioDia = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate(), 0, 0, 0);
       const finDia    = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate(), 23, 59, 59);

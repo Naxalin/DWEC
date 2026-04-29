@@ -1,12 +1,13 @@
-const Cita = require('../models/Cita');
-const Medico = require('../models/Medico');
-const Paciente = require('../models/Paciente');
+const getCita = require('../models/Cita');
+const getMedico = require('../models/Medico');
+const getPaciente = require('../models/Paciente');
 const { Op } = require('sequelize');
 
 const citaController = {
 
   index: async (req, res) => {
     try {
+      const Cita = getCita();
       const { estado, id_medico, fecha } = req.query;
       const where = {};
       if (estado && estado !== '') where.estado = estado;
@@ -27,6 +28,7 @@ const citaController = {
 
   show: async (req, res) => {
     try {
+      const Cita = getCita();
       const cita = await Cita.findByPk(req.params.id, { include: ['medico', 'paciente'] });
       if (!cita) return res.status(404).json({ error: 'Cita no encontrada' });
       res.json(cita);
@@ -38,6 +40,7 @@ const citaController = {
 
   crear: async (req, res) => {
     try {
+      const Cita = getCita();
       const { id_medico, id_paciente, fecha_hora, motivo, estado } = req.body;
       const cita = await Cita.create({ id_medico, id_paciente, fecha_hora, motivo, estado: estado || 'Pendiente' });
       res.status(201).json(cita);
@@ -49,6 +52,7 @@ const citaController = {
 
   actualizar: async (req, res) => {
     try {
+      const Cita = getCita();
       const cita = await Cita.findByPk(req.params.id);
       if (!cita) return res.status(404).json({ error: 'Cita no encontrada' });
       const { id_medico, id_paciente, fecha_hora, motivo, estado } = req.body;
@@ -62,6 +66,7 @@ const citaController = {
 
   eliminar: async (req, res) => {
     try {
+      const Cita = getCita();
       const cita = await Cita.findByPk(req.params.id);
       if (!cita) return res.status(404).json({ error: 'Cita no encontrada' });
       await cita.destroy();

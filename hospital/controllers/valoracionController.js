@@ -1,11 +1,13 @@
 const Valoracion = require('../models/Valoracion');
-const Medico = require('../models/Medico');
-const Paciente = require('../models/Paciente');
+const getMedico = require('../models/Medico');
+const getPaciente = require('../models/Paciente');
 
 const valoracionController = {
 
   index: async (req, res) => {
     try {
+      const Medico = getMedico();
+      const Paciente = getPaciente();
       const { estado, id_medico, puntuacion } = req.query;
       const filtro = {};
       if (estado && estado !== '') filtro.estado = estado;
@@ -33,6 +35,8 @@ const valoracionController = {
 
   show: async (req, res) => {
     try {
+      const Medico = getMedico();
+      const Paciente = getPaciente();
       const valoracion = await Valoracion.findById(req.params.id);
       if (!valoracion) return res.status(404).json({ error: 'Valoración no encontrada' });
       const medico   = await Medico.findByPk(valoracion.id_medico);
