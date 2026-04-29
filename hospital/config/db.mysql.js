@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
-let sequelize;
+let sequelize = null;
 
 const getSequelize = () => {
   if (!sequelize) {
@@ -11,15 +11,19 @@ const getSequelize = () => {
       process.env.DB_PASSWORD,
       {
         host: process.env.DB_HOST,
-        port: process.env.DB_PORT || 3306,
+        port: Number(process.env.DB_PORT || 3306),
         dialect: 'mysql',
         logging: false,
-        define: {
-          timestamps: false
+        pool: {
+          max: 1,
+          min: 0,
+          acquire: 30000,
+          idle: 10000
         }
       }
     );
   }
+
   return sequelize;
 };
 
@@ -30,7 +34,7 @@ const connectMySQL = async () => {
     console.log('✅ MySQL conectado correctamente');
     return db;
   } catch (error) {
-    console.error('❌ Error al conectar MySQL:', error.message);
+    console.error('❌ Error MySQL:', error.message);
     return null;
   }
 };
