@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
-const { sequelize } = require('../config/db.mysql');
-const Especialidad = require('./Especialidad');
+const { getSequelize } = require('../config/db.mysql');
+
+const sequelize = getSequelize();
 
 const Medico = sequelize.define('Medico', {
   id: {
@@ -10,11 +11,7 @@ const Medico = sequelize.define('Medico', {
   },
   id_especialidad: {
     type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: 'especialidades',
-      key: 'id'
-    }
+    allowNull: false
   },
   nombre: {
     type: DataTypes.STRING(100),
@@ -28,9 +25,7 @@ const Medico = sequelize.define('Medico', {
     type: DataTypes.STRING(150),
     allowNull: false,
     unique: true,
-    validate: {
-      isEmail: true
-    }
+    validate: { isEmail: true }
   },
   telefono: {
     type: DataTypes.STRING(20),
@@ -45,8 +40,5 @@ const Medico = sequelize.define('Medico', {
   tableName: 'medicos',
   timestamps: false
 });
-
-Medico.belongsTo(Especialidad, { foreignKey: 'id_especialidad', as: 'especialidad' });
-Especialidad.hasMany(Medico, { foreignKey: 'id_especialidad', as: 'medicos' });
 
 module.exports = Medico;
