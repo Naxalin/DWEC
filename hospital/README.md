@@ -232,7 +232,7 @@ PORT=3000
 
 ## 🌐 URL de la aplicación desplegada
 
-
+https://dwec-llju-jg8q6m59m-mafia9512-3169s-projects.vercel.app/#/dashboard
 
 ---
 
@@ -241,12 +241,12 @@ ESTRUCTURA :
 
 hospital/
 ├── config/
-│   ├── db.mysql.js          # Conexión Sequelize
-│   └── db.mongo.js          # Conexión Mongoose
+│   ├── db.mysql.js         
+│   └── db.mongo.js          
 ├── models/
-│   ├── Especialidad.js      # Modelo Sequelize
-│   ├── Medico.js            # Modelo Sequelize
-│   ├── Paciente.js          # Modelo Sequelize
+│   ├── Especialidad.js      
+│   ├── Medico.js            
+│   ├── Paciente.js          
 │   ├── Cita.js              
 │   └── Valoracion.js       
 ├── controllers/
@@ -262,10 +262,10 @@ hospital/
 │   ├── pacientes.js
 │   └── valoraciones.js
 ├── public/
-│   ├── index.html           # Único HTML — SPA
+│   ├── index.html         
 │   ├── css/style.css
 │   └── js/
-│       ├── app.js           # Router SPA + utilidades globales
+│       ├── app.js           
 │       ├── dashboard.js
 │       ├── medicos.js
 │       ├── medico-detalle.js
@@ -279,10 +279,10 @@ hospital/
 │       ├── valoracion-detalle.js
 │       └── valoracion-form.js
 ├── data/
-│   ├── hospital.sql         # Script MySQL con tablas e INSERTs
-│   └── valoraciones.json    # Documentos MongoDB iniciales
+│   ├── hospital.sql         
+│   └── valoraciones.json   
 ├── .env
 ├── .gitignore
-├── app.js                   # Servidor Express principal
+├── app.js                   
 ├── package.json
 └── README.md
