@@ -1,11 +1,14 @@
 require('dotenv').config();
 
+const { getSequelize, connectMySQL } = require('./config/db.mysql');
+const { connectMongo } = require('./config/db.mongo');
+
+getSequelize();
+require('./models/associations')();
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-
-const { getSequelize, connectMySQL } = require('./config/db.mysql');
-const { connectMongo } = require('./config/db.mongo');
 
 const app = express();
 
@@ -25,12 +28,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-const initDB = async () => {
-  await connectMySQL();
-  require('./models/associations')();
-  await connectMongo();
-};
-
-initDB().catch(console.error);
+// Conexiones async en background
+connectMySQL().catch(console.error);
+connectMongo().catch(console.error);
 
 module.exports = app;
