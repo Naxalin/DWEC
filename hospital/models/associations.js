@@ -1,11 +1,16 @@
-const Medico = require('./Medico')();
-const Paciente = require('./Paciente')();
-const Cita = require('./Cita')();
+const getMedico = require('./Medico');
+const getEspecialidad = require('./Especialidad');
+const getCita = require('./Cita');
 
-Cita.belongsTo(Medico, { foreignKey: 'id_medico', as: 'medico' });
-Cita.belongsTo(Paciente, { foreignKey: 'id_paciente', as: 'paciente' });
+module.exports = (sequelize) => {
 
-Medico.hasMany(Cita, { foreignKey: 'id_medico', as: 'citas' });
-Paciente.hasMany(Cita, { foreignKey: 'id_paciente', as: 'citas' });
+  const Medico = getMedico();
+  const Especialidad = getEspecialidad();
+  const Cita = getCita();
 
-module.exports = {};
+  Especialidad.hasMany(Medico, { foreignKey: 'id_especialidad', as: 'medicos' });
+  Medico.belongsTo(Especialidad, { foreignKey: 'id_especialidad', as: 'especialidad' });
+
+  Medico.hasMany(Cita, { foreignKey: 'id_medico', as: 'citas' });
+  Cita.belongsTo(Medico, { foreignKey: 'id_medico', as: 'medico' });
+};
