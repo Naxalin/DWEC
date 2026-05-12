@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Alumnos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Gestión de Alumnos</h1>
+            <p class="subtitle">Sistema de registro de usuarios</p>
+        </header>
+
+        <form id="formulario">
+            <div class="form-grid">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required>
+                </div>
+                <div class="campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ej: García López" required>
+                </div>
+                <div class="campo">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" id="localidad" name="localidad" placeholder="Ej: Madrid">
+                </div>
+                <div class="campo">
+                    <label for="imagen">Fotografía</label>
+                    <input type="file" name="imagen" id="imagen" accept="image/*" required>
+                </div>
+            </div>
+            <button type="submit" id="btn-submit">
+                <span class="btn-text">Dar de alta</span>
+                <span class="btn-loading" style="display:none">Guardando...</span>
+            </button>
+        </form>
+
+        <div id="lista"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
