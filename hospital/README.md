@@ -232,7 +232,7 @@ PORT=3000
 
 ## 🌐 URL de la aplicación desplegada
 
-https://dwec-llju-jg8q6m59m-mafia9512-3169s-projects.vercel.app/#/dashboard
+dwec-k9ya.vercel.app
 
 ---
 
