@@ -93,13 +93,13 @@ async function renderPacienteForm(id = null) {
             method: 'PUT',
             body: JSON.stringify(datos)
           });
-          navigate(`#/pacientes/${id}`);
+          navigate(`/pacientes/${id}`);
         } else {
           const nuevo = await apiFetch('/api/pacientes', {
             method: 'POST',
             body: JSON.stringify(datos)
           });
-          navigate(`#/pacientes/${nuevo.id}`);
+          navigate(`/pacientes/${nuevo.id}`);
         }
       } catch (err) {
         errorDiv.textContent = err.message;

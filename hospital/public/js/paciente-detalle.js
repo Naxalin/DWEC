@@ -6,7 +6,10 @@ async function renderPacienteDetalle(id) {
     setApp(`
       <div class="page-header">
         <h1 class="page-title">Ficha del paciente</h1>
-        <a href="#/pacientes" class="btn btn-secondary">← Volver</a>
+        <div style="display:flex;gap:8px">
+          <a href="#/pacientes/editar/${paciente.id}" class="btn btn-primary">Editar</a>
+          <a href="#/pacientes" class="btn btn-secondary">← Volver</a>
+        </div>
       </div>
 
       <div class="card" style="margin-bottom:20px">

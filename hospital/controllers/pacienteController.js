@@ -49,7 +49,6 @@ const pacienteController = {
       res.status(500).json({ error: msg });
     }
   },
-
   actualizar: async (req, res) => {
     try {
       const Paciente = getPaciente();
@@ -57,11 +56,14 @@ const pacienteController = {
       if (!paciente) return res.status(404).json({ error: 'Paciente no encontrado' });
       const { nombre, apellidos, email, telefono, fecha_nacimiento } = req.body;
       await paciente.update({ nombre, apellidos, email, telefono, fecha_nacimiento });
+      await paciente.reload();
       res.json(paciente);
     } catch (error) {
       console.error(error);
-      const msg = error.name === 'SequelizeUniqueConstraintError' ? 'Ya existe un paciente con ese email' : 'Error al actualizar el paciente';
-      res.status(500).json({ error: msg });
+      const msg = error.name === 'SequelizeUniqueConstraintError'
+        ? 'Ya existe un paciente con ese email'
+        : 'Error al actualizar el paciente';
+      res.status(400).json({ error: msg });
     }
   },
 

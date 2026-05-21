@@ -38,7 +38,7 @@ async function router() {
   const citaDetalleMatch      = path.match(/^\/citas\/(\d+)$/);
   const citaEditarMatch       = path.match(/^\/citas\/editar\/(\d+)$/);
   const pacienteDetalleMatch  = path.match(/^\/pacientes\/(\d+)$/);
-  const pacienteEditarMatch   = path.match(/^\/pacientes\/editar\/(\d+)$/);
+  const pacienteEditarMatch = path.match(/^\/pacientes\/editar\/(\d+)$/);
   const valoracionDetalleMatch= path.match(/^\/valoraciones\/([a-f0-9]+)$/);
   const valoracionEditarMatch = path.match(/^\/valoraciones\/editar\/([a-f0-9]+)$/);
 
